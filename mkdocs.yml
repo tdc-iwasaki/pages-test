@@ -59,7 +59,7 @@ extra_css:
 
 nav:
   - TOP: index.md
-  - アーキテクチャ: 
+  - docs: 
     - first:
       - first/first_doc.md
       - second:
