@@ -1,0 +1,71 @@
+site_name: 'テストページ'
+site_description: '（仮）ドキュメントサイトです。'
+copyright: 'hoge'
+dev_addr: '0.0.0.0:8000'
+
+theme:
+  name: material
+  navigation_tabs: true
+  language: 'ja'
+  font:
+    text: Noto Sans JP
+    code: Roboto Mono
+  features:
+    - navigation.tabs 
+    - navigation.top
+    - navigation.footer
+    # - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - content.footnote.tooltips
+
+plugins:
+  - "gh-admonitions"
+  - search
+  
+markdown_extensions:
+  - def_list
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      noclasses: false
+      linenums: true
+      anchor_linenums: true
+  - pymdownx.superfences:
+        custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - footnotes
+  - toc:
+      toc_depth: 3
+  - pymdownx.details
+  - mdx_truly_sane_lists:
+      nested_indent: 2
+ 
+extra:
+  search:
+    language: 'jp'
+  generator: false
+
+extra_css:
+  - 'css/extra.css'
+
+nav:
+  - TOP: index.md
+  - アーキテクチャ: 
+    - first:
+      - first/first_doc.md
+      - second:
+        - first/second/second_doc.md
+    - 1st:
+      - 1st/1st_doc.md
+      - 2nd:
+        - 1st/2nd/2nd_doc.md
+        - 1st/2nd/3rd_doc.md
