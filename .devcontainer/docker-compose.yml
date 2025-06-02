@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  dev:
+    container_name: "pages-test"
+    build:
+      context: "."
+      dockerfile: "./docker/Dockerfile"
+    volumes:
+      - "../:/opt/project/mkdocs"
+    working_dir: "/opt/project/mkdocs"
+    tty: true
+    command: ["mkdocs", "serve"]
+    ports:
+      - "8000:8000"
