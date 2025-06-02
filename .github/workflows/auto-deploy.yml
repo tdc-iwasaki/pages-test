@@ -26,4 +26,5 @@ jobs:
           docker compose run dev mkdocs build
           cd ~/
           rm -rf repos/pages-test/${{ github.ref_name }}
+          mkdir -p repos/pages-test
           cp -r pages-test/site repos/pages-test/${{ github.ref_name }}
